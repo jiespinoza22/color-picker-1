@@ -3,17 +3,17 @@ window.onload = function () {
 };
 
 function initColorPicker() {
-    let colorbox = document.getElementById("color-box");
+    let element = document.getElementById("color-box");
     let rgb = {
         red: document.getElementById("red"),
         green: document.getElementById("green"),
         blue: document.getElementById("blue")
     };
     let colorPicker = document.getElementsByClassName("picker");
-    setColorPickerEventListeners(colorbox, rgb, colorPicker);
+    setColorPickerEventListeners(element, rgb, colorPicker);
 }
 
-function setColorPickerEventListeners(ColorBox, rgb, pickerElements) {
+function setColorPickerEventListeners(element, rgb, pickerElements) {
     let pickerLen = pickerElements.length;
     for (let i = 0; i < pickerLen ; i++) {
         pickerElements[i].addEventListener('change', () => {
